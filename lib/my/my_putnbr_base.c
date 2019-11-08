@@ -1,15 +1,15 @@
 /*
 ** EPITECH PROJECT, 2019
-** CPool_bistro-matic_2019
+** PSU_my_printf_2019
 ** File description:
 ** my_putnbr_base.c
 */
 
-void    my_putchar(char c);
+void my_putchar(char c);
 
-int    my_strlen(char const *str);
+int my_strlen(char *str);
 
-int    my_putnbr_base(int nbr, char const *base)
+void my_putnbr_base(long long nbr, char *base)
 {
     int len = my_strlen(base);
 
