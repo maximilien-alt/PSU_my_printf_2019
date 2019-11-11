@@ -26,6 +26,8 @@ void my_print_o(va_list ap);
 
 void my_print_b(va_list ap);
 
+void my_print_u(va_list ap);
+
 void my_print_S(va_list ap);
 
 typedef struct format_t
@@ -34,7 +36,7 @@ typedef struct format_t
     void (*ptr)(va_list);
 } format_t;
 
-static format_t tab[10] =
+static format_t tab[11] =
 {
     {'s', my_print_s},
     {'c', my_print_c},
@@ -45,6 +47,7 @@ static format_t tab[10] =
     {'X', my_print_X},
     {'o', my_print_o},
     {'b', my_print_b},
+    {'u', my_print_u},
     {'S', my_print_S}
 };
 
@@ -52,7 +55,7 @@ void my_print(char *str, va_list ap, ...)
 {
     int test = 0;
 
-    for (int i = 0; i <= 10; i += 1) {
+    for (int i = 0; i <= 11; i += 1) {
         if (str[1] == tab[i].c) {
             test += 1;
             tab[i].ptr(ap);
