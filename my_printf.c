@@ -61,7 +61,9 @@ void my_print(char *str, va_list ap, ...)
     if (test == 1)
         return;
     my_putchar('%');
-    my_putchar(str[1]);
+    if (str[1] != '%')
+        my_putchar(str[1]);
+    return;
 }
 
 int my_printf(char *format, ...)
