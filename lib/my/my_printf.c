@@ -50,18 +50,12 @@ static format_t tab[10] =
 
 void my_print(char *str, va_list ap, ...)
 {
-    int test = 0;
-
     for (int i = 0; i <= 10; i += 1) {
         if (str[1] == tab[i].c) {
-            test += 1;
             tab[i].ptr(ap);
         }
     }
-    if (test == 1)
-        return;
-    my_putchar('%');
-    my_putchar(str[1]);
+    return;
 }
 
 int my_printf(char *format, ...)
@@ -81,4 +75,9 @@ int my_printf(char *format, ...)
     }
     va_end(ap);
     return (0);
+}
+
+int main(void)
+{
+    my_printf("%u", 150);
 }
