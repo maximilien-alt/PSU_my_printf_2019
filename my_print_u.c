@@ -12,7 +12,7 @@ void my_putchar(char c);
 void my_put_long(long nbr)
 {
     if (nbr >= 10) {
-        my_put_nbr(nbr/10);
+        my_put_long(nbr/10);
         my_putchar(nbr % 10 + '0');
     } else {
         my_putchar(nbr + '0');
