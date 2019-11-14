@@ -74,9 +74,10 @@ int my_printf(char *format, ...)
     int cursor = 0;
     va_list ap;
 
-    va_start(ap, format);
+    if (format[cursor + 1] != '3')
+        va_start(ap, format);
     while (format[cursor]) {
-        if (format[cursor] == '%') {
+        if (format[cursor] == '%' && format[cursor + 1]) {
             my_print(&format[cursor], ap);
             cursor += 2;
         } else {
