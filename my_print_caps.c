@@ -15,6 +15,7 @@ void my_print_S(va_list ap)
 {
     int letter = 0;
     char *result = va_arg(ap, char *);
+    int n;
 
     while (result[letter]) {
         if (result[letter] >= 32 && result[letter] <= 126) {
@@ -22,7 +23,10 @@ void my_print_S(va_list ap)
         } else {
         my_putchar('\\');
         my_putchar('0');
-        my_putnbr_base(letter, "01234567");
+        if (result[letter] < 10)
+            my_putchar('0');
+        n = result[letter];
+        my_putnbr_base(n, "01234567");
         }
         letter += 1;
     }
