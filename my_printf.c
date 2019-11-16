@@ -20,7 +20,7 @@ void my_print_p(va_list ap);
 
 void my_print_x(va_list ap);
 
-void my_print_X(va_list ap);
+void my_print_upcase_x(va_list ap);
 
 void my_print_o(va_list ap);
 
@@ -28,7 +28,7 @@ void my_print_b(va_list ap);
 
 void my_print_u(va_list ap);
 
-void my_print_S(va_list ap);
+void my_print_upcase_s(va_list ap);
 
 typedef struct format_t
 {
@@ -44,11 +44,11 @@ static format_t tab[11] =
     {'i', my_print_d},
     {'p', my_print_p},
     {'x', my_print_x},
-    {'X', my_print_X},
+    {'X', my_print_upcase_x},
     {'o', my_print_o},
     {'b', my_print_b},
     {'u', my_print_u},
-    {'S', my_print_S}
+    {'S', my_print_upcase_s}
 };
 
 void my_print(char *str, va_list ap, ...)

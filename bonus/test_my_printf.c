@@ -17,7 +17,6 @@ Test(my_printf, should_print_hello_into_stdout)
     cr_assert_stdout_eq_str("hello");
 }
 
-
 Test(my_printf, should_print_o_into_stdout)
 {
     cr_redirect_stdout();

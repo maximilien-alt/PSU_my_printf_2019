@@ -17,7 +17,6 @@ Test(my_printf, should_print_C_into_stdout)
     cr_assert_stdout_eq_str("C");
 }
 
-
 Test(my_printf, should_print_34_into_stdout)
 {
     cr_redirect_stdout();

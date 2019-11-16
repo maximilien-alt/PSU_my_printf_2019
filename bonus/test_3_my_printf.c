@@ -17,7 +17,6 @@ Test(my_printf, should_print_0xc_into_stdout)
     cr_assert_stdout_eq_str("Oxc");
 }
 
-
 Test(my_printf, should_print_4294967295_into_stdout)
 {
     cr_redirect_stdout();

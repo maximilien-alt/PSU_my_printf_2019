@@ -11,7 +11,7 @@ void my_putchar(char c);
 
 void my_putnbr_base(int nbr, char *base);
 
-void my_print_S(va_list ap)
+void my_print_upcase_s(va_list ap)
 {
     int letter = 0;
     char *result = va_arg(ap, char *);
