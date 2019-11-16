@@ -19,7 +19,7 @@ $(OBJ)	:
 test_run	:
 	gcc -c -g3 lib/my/$(SRC)
 	ar rc $(OBJ) *.o
-	gcc bonus/test_my_printf.c *.c -L. -lmy -I include --coverage -lcriterion
+	gcc bonus/*.c *.c -L. -lmy -I include --coverage -lcriterion
 
 clean	:
 	rm -f *.o
