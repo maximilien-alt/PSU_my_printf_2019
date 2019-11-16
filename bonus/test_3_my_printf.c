@@ -19,9 +19,11 @@ Test(my_printf, should_print_0xc_into_stdout)
 
 Test(my_printf, should_print_4294967295_into_stdout)
 {
+    long nbr = -100;
+
     cr_redirect_stdout();
-    my_printf("%u", -1);
-    cr_assert_stdout_eq_str("4294967295");
+    my_printf("%u", nbr);
+    cr_assert_stdout_eq_str("4294967196");
 }
 
 Test(my_printf, should_print_non_printable_into_stdout)
